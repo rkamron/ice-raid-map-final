@@ -90,18 +90,18 @@ export default function Map({
                 key={raid.id}
                 className="absolute group cursor-pointer pointer-events-auto"
                 style={{
-                  top: `${top}%`,
-                  left: `${left}%`,
+                  top: `${top + (raid.id % 3 - 1) * 1.5}%`, // Offset by ID to avoid overlap
+                  left: `${left + (raid.id % 2) * 2}%`,     // Slight horizontal offset
                   transform: 'translate(-50%, -50%)',
                   zIndex: 1000,
                 }}
                 onClick={() => handleRaidClick(raid)}
                 title={raid.title}
               >
-                {/* Wrapper with slight background for better visibility */}
-                <div className="rounded-full p-0.5 bg-white/80 shadow-xl" style={{ backdropFilter: 'blur(2px)' }}>
+                {/* Wrapper with background for better visibility */}
+                <div className="rounded-md p-0.5 bg-white/90 shadow-xl" style={{ backdropFilter: 'blur(2px)', maxWidth: '200px' }}>
                   {/* Combined marker and label */}
-                  <div className="relative flex items-center bg-white rounded-full py-1 pl-1 pr-2">
+                  <div className="relative flex items-center bg-white rounded-md py-1 pl-1 pr-2">
                     {/* Marker dot */}
                     <div 
                       className="w-6 h-6 rounded-full border-2 border-white shadow-md flex-shrink-0"
@@ -111,9 +111,9 @@ export default function Map({
                       }}
                     />
                     
-                    {/* Label directly attached to marker */}
-                    <div className="ml-1 text-xs whitespace-nowrap z-20 font-semibold">
-                      {raid.raidType}
+                    {/* Label directly attached to marker - now showing the raid title */}
+                    <div className="ml-1 text-xs z-20 font-semibold" style={{ lineHeight: '1.1' }}>
+                      {raid.title}
                     </div>
                   </div>
                 </div>
