@@ -48,13 +48,19 @@ export default function Map({
           marginWidth={0}
           src={mapUrl}
           title="Map showing ICE raid locations"
-          style={{ border: 0 }}
+          style={{ 
+            border: 0,
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            zIndex: 1 // Lower z-index so markers appear above
+          }}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
         
         {/* Overlay markers on top of the map */}
-        <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute inset-0 pointer-events-none z-10">
           {raids.map((raid) => {
             // Calculate position based on lat/long
             // This is a simplified approach for demonstration
@@ -89,12 +95,15 @@ export default function Map({
               >
                 {/* Marker dot */}
                 <div 
-                  className="w-4 h-4 rounded-full border-2 border-white shadow-md"
-                  style={{ backgroundColor: getMarkerColor(raid.raidType) }}
+                  className="w-5 h-5 rounded-full border-2 border-white shadow-lg"
+                  style={{ 
+                    backgroundColor: getMarkerColor(raid.raidType),
+                    zIndex: 15
+                  }}
                 />
                 
                 {/* Permanent label with basic info */}
-                <div className="absolute left-full ml-1 bg-white/90 shadow rounded px-1.5 py-0.5 text-xs -mt-1 whitespace-nowrap">
+                <div className="absolute left-full ml-1 bg-white shadow-md rounded px-1.5 py-0.5 text-xs -mt-1 whitespace-nowrap z-20 border border-gray-200">
                   {raid.raidType}
                 </div>
                 
