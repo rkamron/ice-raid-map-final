@@ -77,40 +77,16 @@ export default function Map({
             return (
               <div
                 key={raid.id}
-                className="absolute group cursor-pointer pointer-events-auto"
+                className="absolute w-4 h-4 rounded-full cursor-pointer pointer-events-auto transform -translate-x-1/2 -translate-y-1/2 border-2 border-white shadow-md"
                 style={{
                   top: `${top}%`,
                   left: `${left}%`,
-                  transform: 'translate(-50%, -50%)',
+                  backgroundColor: getMarkerColor(raid.raidType),
                   zIndex: 1000,
                 }}
                 onClick={() => handleRaidClick(raid)}
                 title={raid.title}
-              >
-                {/* Marker dot */}
-                <div 
-                  className="w-4 h-4 rounded-full border-2 border-white shadow-md"
-                  style={{ backgroundColor: getMarkerColor(raid.raidType) }}
-                />
-                
-                {/* Permanent label with basic info */}
-                <div className="absolute left-full ml-1 bg-white/90 shadow rounded px-1.5 py-0.5 text-xs -mt-1 whitespace-nowrap">
-                  {raid.raidType}
-                </div>
-                
-                {/* Detailed label that appears on hover */}
-                <div className="hidden group-hover:block absolute left-1/2 bottom-full mb-1 -translate-x-1/2 w-max max-w-xs bg-white shadow-lg rounded p-2 text-xs z-20">
-                  <p className="font-bold">{raid.title}</p>
-                  <p className="text-xs text-gray-600">{raid.location}</p>
-                  <p className="text-xs mt-0.5">
-                    <span 
-                      className="inline-block h-2 w-2 rounded-full mr-1"
-                      style={{ backgroundColor: getMarkerColor(raid.raidType) }}
-                    ></span>
-                    {raid.raidType}
-                  </p>
-                </div>
-              </div>
+              />
             );
           })}
         </div>
@@ -137,41 +113,6 @@ export default function Map({
         >
           <Menu className="h-5 w-5" />
         </Button>
-      </div>
-      
-      {/* Map legend */}
-      <div className="absolute top-4 left-4 z-10 bg-white rounded shadow-md p-3 text-xs text-neutral-600">
-        <p className="font-bold mb-1">ICE Raid Types:</p>
-        <div className="grid gap-1">
-          <div className="flex items-center">
-            <span 
-              className="inline-block h-3 w-3 rounded-full mr-2 border border-white shadow-sm"
-              style={{ backgroundColor: getMarkerColor("Workplace") }}
-            ></span>
-            <span>Workplace Raids</span>
-          </div>
-          <div className="flex items-center">
-            <span 
-              className="inline-block h-3 w-3 rounded-full mr-2 border border-white shadow-sm"
-              style={{ backgroundColor: getMarkerColor("Residential") }}
-            ></span>
-            <span>Residential Raids</span>
-          </div>
-          <div className="flex items-center">
-            <span 
-              className="inline-block h-3 w-3 rounded-full mr-2 border border-white shadow-sm"
-              style={{ backgroundColor: getMarkerColor("Checkpoint") }}
-            ></span>
-            <span>Checkpoint Operations</span>
-          </div>
-          <div className="flex items-center">
-            <span 
-              className="inline-block h-3 w-3 rounded-full mr-2 border border-white shadow-sm"
-              style={{ backgroundColor: getMarkerColor("Other") }}
-            ></span>
-            <span>Other Enforcement</span>
-          </div>
-        </div>
       </div>
       
       {/* Data source info */}
