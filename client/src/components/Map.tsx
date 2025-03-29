@@ -26,13 +26,8 @@ export default function Map({
   // State for selected raid
   const [, setSelectedRaid] = useState<RaidData | null>(null);
   
-  // Generate a map URL with markers directly embedded in it
-  let mapUrl = "https://maps.google.com/maps?";
-  
-  // Add map center and zoom
-  mapUrl += "q=United+States&t=&z=4&ie=UTF8&iwloc=&output=embed";
-  
-  // We'll use custom markers in our overlay div instead of Google's markers
+  // Generate a simple static map URL with the center point of the US
+  const mapUrl = "https://maps.google.com/maps?q=United+States&t=&z=4&ie=UTF8&iwloc=&output=embed";
   
   // Handle raid selection
   const handleRaidClick = (raid: RaidData) => {
@@ -65,7 +60,7 @@ export default function Map({
         ></iframe>
         
         {/* Overlay markers on top of the map */}
-        <div className="absolute inset-0 pointer-events-none z-30">
+        <div className="absolute inset-0 pointer-events-none z-10">
           {raids.map((raid) => {
             // Calculate position based on lat/long
             // This is a simplified approach for demonstration
@@ -90,32 +85,26 @@ export default function Map({
                 key={raid.id}
                 className="absolute group cursor-pointer pointer-events-auto"
                 style={{
-                  top: `${top + (raid.id % 3 - 1) * 1.5}%`, // Offset by ID to avoid overlap
-                  left: `${left + (raid.id % 2) * 2}%`,     // Slight horizontal offset
+                  top: `${top}%`,
+                  left: `${left}%`,
                   transform: 'translate(-50%, -50%)',
                   zIndex: 1000,
                 }}
                 onClick={() => handleRaidClick(raid)}
                 title={raid.title}
               >
-                {/* Wrapper with background for better visibility */}
-                <div className="rounded-md p-0.5 bg-white/90 shadow-xl" style={{ backdropFilter: 'blur(2px)', maxWidth: '200px' }}>
-                  {/* Combined marker and label */}
-                  <div className="relative flex items-center bg-white rounded-md py-1 pl-1 pr-2">
-                    {/* Marker dot */}
-                    <div 
-                      className="w-6 h-6 rounded-full border-2 border-white shadow-md flex-shrink-0"
-                      style={{ 
-                        backgroundColor: getMarkerColor(raid.raidType),
-                        zIndex: 15
-                      }}
-                    />
-                    
-                    {/* Label directly attached to marker - now showing the raid title */}
-                    <div className="ml-1 text-xs z-20 font-semibold" style={{ lineHeight: '1.1' }}>
-                      {raid.title}
-                    </div>
-                  </div>
+                {/* Marker dot */}
+                <div 
+                  className="w-5 h-5 rounded-full border-2 border-white shadow-lg"
+                  style={{ 
+                    backgroundColor: getMarkerColor(raid.raidType),
+                    zIndex: 15
+                  }}
+                />
+                
+                {/* Permanent label with basic info */}
+                <div className="absolute left-full ml-1 bg-white shadow-md rounded px-1.5 py-0.5 text-xs -mt-1 whitespace-nowrap z-20 border border-gray-200">
+                  {raid.raidType}
                 </div>
                 
                 {/* Detailed label that appears on hover */}
