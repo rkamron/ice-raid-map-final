@@ -3,7 +3,7 @@ import { useRaidData, useLastUpdated } from "@/hooks/useRaidData";
 import { RaidFilters, RaidData } from "@/types";
 import Header from "@/components/Header";
 import FilterPanel from "@/components/FilterPanel";
-import Map from "@/components/Map";
+import EssentialMap from "@/components/EssentialMap";
 import RaidDetailModal from "@/components/RaidDetailModal";
 import InfoModal from "@/components/InfoModal";
 import { getDateDaysAgo } from "@/lib/dateUtils";
@@ -66,7 +66,7 @@ export default function Home() {
         />
         
         {/* Map View */}
-        <Map
+        <EssentialMap
           raids={raids || []}
           isLoading={isLoading}
           onRaidClick={handleRaidClick}

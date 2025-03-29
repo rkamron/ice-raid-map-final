@@ -160,7 +160,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.get("/api/states", async (_req: Request, res: Response) => {
     try {
       const raids = await storage.getAllRaids();
-      const states = [...new Set(raids.map(raid => raid.state))].sort();
+      const statesSet = new Set<string>();
+      raids.forEach(raid => {
+        if (raid.state) {
+          statesSet.add(raid.state);
+        }
+      });
+      const states = Array.from(statesSet).sort();
       
       return res.json(states);
     } catch (error) {
@@ -182,6 +188,19 @@ export async function registerRoutes(app: Express): Promise<Server> {
       return res.json({ lastUpdated });
     } catch (error) {
       return res.status(500).json({ message: "Failed to fetch last updated timestamp" });
+    }
+  });
+  
+  // Get Google Maps API key 
+  app.get("/api/maps/key", (_req: Request, res: Response) => {
+    try {
+      const apiKey = process.env.GOOGLE_MAPS_API_KEY;
+      if (!apiKey) {
+        return res.status(500).json({ message: "Google Maps API key not configured" });
+      }
+      return res.json({ apiKey });
+    } catch (error) {
+      return res.status(500).json({ message: "Failed to get Maps API key" });
     }
   });
 
