@@ -7,15 +7,23 @@ import path from 'path';
 // Configuration for Gemini API
 const GEMINI_API_KEY = 'AIzaSyBD4m4cJbEkOb_yyaI6XVfBz3v_ytGckEs'; // Replace with your actual API key
 const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent';
+import { fileURLToPath } from 'url';
 
-//Function to store the scraped data in json format
-const __dirname = path.dirname(new URL(import.meta.url).pathname).replace(/^\/([a-zA-Z]:)/, '$1');
+// Replace the __dirname definition with:
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const dataPath = path.join(__dirname, 'scrapedData.json');
+
+// Ensure directory exists
+if (!fs.existsSync(__dirname)) {
+    fs.mkdirSync(__dirname, { recursive: true });
+}
+
+// Initialize file if it doesn't exist
 if (!fs.existsSync(dataPath)) {
     fs.writeFileSync(dataPath, JSON.stringify([]));
 }
-// Function to save scraped data to a JSON file
-
 
 // Function to fetch and parse webpage content
 async function fetchWebpageContent(url: string): Promise<{content: string}> {
