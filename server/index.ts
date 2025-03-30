@@ -1,3 +1,18 @@
+import dotenv from "dotenv";
+import path from "path";
+import { fileURLToPath } from "url";
+
+// ✅ Get the equivalent of __dirname in ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// ✅ Now correctly load .env
+dotenv.config({ path: path.resolve(__dirname, ".env") });
+
+console.log("All ENV Variables:", process.env);
+
+
+
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
