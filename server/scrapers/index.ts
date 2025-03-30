@@ -22,44 +22,78 @@ export async function initScrapers() {
   try {
     // Scrape url for ICE raids
     const allScrapedRaids: ScrapedRaid[] = [];
-    const urlIn = 'https://www.ice.gov/newsroom'; // Replace with actual URL
-    const scrapedRaids = await initScraperURL(urlIn);
-
-    // Combine all scraped data
     
-    if (scrapedRaids) {
-      allScrapedRaids.push(...scrapedRaids); // Use spread operator to add multiple raids if scrapedRaids is an array
+    // Initialize the URL scraper with the ICE newsroom URL
+    const urlIn = 'https://www.ice.gov/newsroom';
+    console.log(`Starting to scrape: ${urlIn}`);
+    
+    // Get raid information from the URL scraper
+    const scrapedRaids = await initScraperURL(urlIn);
+    
+    // Add valid scraped raids to our collection
+    if (scrapedRaids && scrapedRaids.length > 0) {
+      console.log(`Found ${scrapedRaids.length} raids from URL scraper`);
+      allScrapedRaids.push(...scrapedRaids);
+    } else {
+      console.log("No raids found from URL scraper");
     }
     
     // Process and store each raid
+    console.log(`Beginning to process ${allScrapedRaids.length} total raids`);
+    
+    let successCount = 0;
+    let skipCount = 0;
+    let errorCount = 0;
+    
     for (const raid of allScrapedRaids) {
-      await processAndStoreRaid(raid);
+      try {
+        const result = await processAndStoreRaid(raid);
+        if (result === 'success') {
+          successCount++;
+        } else if (result === 'skip') {
+          skipCount++;
+        }
+      } catch (error) {
+        console.error(`Error processing raid "${raid.title}":`, error);
+        errorCount++;
+      }
     }
     
-    console.log(`Scraping completed. Processed ${allScrapedRaids.length} raids.`);
+    console.log(`Scraping completed. Results:
+    - Total raids processed: ${allScrapedRaids.length}
+    - Successfully stored: ${successCount}
+    - Skipped (duplicates): ${skipCount}
+    - Errors: ${errorCount}`);
+    
   } catch (error) {
     console.error("Error during scraping process:", error);
   }
 }
 
-async function processAndStoreRaid(raid: ScrapedRaid) {
+async function processAndStoreRaid(raid: ScrapedRaid): Promise<'success' | 'skip' | 'error'> {
   try {
+    // Validate raid data
+    if (!raid.title || !raid.location || raid.title === "NOT FOUND" || raid.location === "NOT FOUND") {
+      console.log(`Skipping invalid raid with missing data: ${raid.title || 'Untitled'}`);
+      return 'skip';
+    }
+    
     // Check if the raid already exists to avoid duplicates
-    // This is a simple check based on URL, but could be more sophisticated
     const existingRaids = await storage.getAllRaids();
     const duplicateRaid = existingRaids.find(r => r.sourceUrl === raid.sourceUrl);
     
     if (duplicateRaid) {
       console.log(`Skipping duplicate raid: ${raid.title}`);
-      return;
+      return 'skip';
     }
     
     // Geocode the location
+    console.log(`Geocoding location: ${raid.location}`);
     const coordinates = await geocodeLocation(raid.location);
     
     if (!coordinates) {
-      console.error(`Failed to geocode location for raid: ${raid.title}`);
-      return;
+      console.error(`Failed to geocode location for raid: ${raid.title}, location: ${raid.location}`);
+      return 'error';
     }
     
     // Prepare raid data for storage
@@ -81,8 +115,10 @@ async function processAndStoreRaid(raid: ScrapedRaid) {
     
     // Store the raid
     await storage.createRaid(raidData);
-    console.log(`Stored new raid: ${raid.title}`);
+    console.log(`Successfully stored new raid: ${raid.title}`);
+    return 'success';
   } catch (error) {
     console.error(`Error processing raid ${raid.title}:`, error);
+    return 'error';
   }
 }
