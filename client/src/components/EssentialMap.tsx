@@ -107,6 +107,10 @@ export default function EssentialMap({
         position,
         map,
         title: raid.title,
+        icon: {
+          url: "https://upload.wikimedia.org/wikipedia/commons/5/52/Shield_Icon_Transparent.png",
+          scaledSize: new window.google.maps.Size(32, 32), // Adjust the size as needed
+        },
       });
       
       // Create info content
