@@ -17,7 +17,7 @@ interface RaidDetailModalProps {
 
 export default function RaidDetailModal({ raid, isOpen, onClose }: RaidDetailModalProps) {
   if (!raid) return null;
-  
+   
   // Handle sharing
   const handleShare = () => {
     if (navigator.share) {

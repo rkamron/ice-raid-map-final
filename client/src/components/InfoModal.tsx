@@ -5,7 +5,7 @@ import { X } from "lucide-react";
 interface InfoModalProps {
   isOpen: boolean;
   onClose: () => void;
-}
+} 
 
 export default function InfoModal({ isOpen, onClose }: InfoModalProps) {
   return (

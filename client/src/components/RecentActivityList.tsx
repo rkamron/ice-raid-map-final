@@ -16,7 +16,7 @@ export default function RecentActivityList({ raids, onRaidClick }: RecentActivit
         <h2 className="text-lg font-medium mb-4">Recent Activity</h2>
         <p className="text-sm text-neutral-500">No recent raids found.</p>
       </div>
-    );
+    ); 
   }
   
   return (

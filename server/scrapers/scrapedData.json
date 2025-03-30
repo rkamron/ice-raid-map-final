@@ -1,5 +1,29 @@
 [
   {
+    "title": "ICE arrests illegal Mexican national involved in 2014 vehicular homicide of 13-year-old girl",
+    "description": "ICE arrested Ramiro Guevara, a 46-year-old Mexican national, who was involved in a 2014 vehicle accident resulting in the death of a 13-year-old girl. He was wanted for an outstanding order of deportation.",
+    "location": "Dallas, TX",
+    "state": "TX",
+    "raidType": "Other",
+    "sourceType": "News",
+    "sourceUrl": "https://www.ice.gov/news/releases/ice-arrests-illegal-mexican-national-involved-2014-vehicular-homicide-13-year-old",
+    "sourceName": "ICE News Releases",
+    "raidDate": "2025-03-26T00:00:00.000Z",
+    "detaineeCount": 1
+  },
+  {
+    "title": "Father, son arrested on fentanyl trafficking, gun sales and immigration violations following ICE, multiagency investigation",
+    "description": "A father and son were arrested for trafficking fentanyl and illegal firearms sales. The investigation was conducted by U.S. Immigration and Customs Enforcement assisted by multiple federal and state law enforcement agencies focused on financial crimes in Southern California. One of the arrestees was also charged with illegal reentry of a removed alien.",
+    "location": "Los Angeles, CA",
+    "state": "CA",
+    "raidType": "Other",
+    "sourceType": "News",
+    "sourceUrl": "https://www.ice.gov/news/releases/father-son-arrested-fentanyl-trafficking-gun-sales-and-immigration-violations",
+    "sourceName": "ICE News Releases",
+    "raidDate": "2025-03-26T00:00:00.000Z",
+    "detaineeCount": 2
+  },
+  {
     "title": "ICE Denver removes man wanted in El Salvador",
     "description": "U.S. Immigration and Customs Enforcement removed Salvadoran national and foreign fugitive Jose Eduardo Moran-Garcia, 28, to El Salvador via air transportation. Moran is wanted in his home country for aggravated homicide, displacement of individuals, unlawful groupings and aggravated robbery.",
     "location": "Denver, CO",
@@ -12,32 +36,20 @@
     "detaineeCount": 1
   },
   {
-    "title": "Father, son arrested on fentanyl trafficking, gun sales and immigration violations following ICE, multiagency investigation",
-    "description": "A father and son were arrested for trafficking fentanyl and illegal firearms sales following an investigation conducted by U.S. Immigration and Customs Enforcement assisted by multiple federal and state law enforcement agencies.",
-    "location": "Los Angeles, CA",
-    "state": "CA",
-    "raidType": "Other",
+    "title": "International law enforcement cooperation leads to takedown and immigration arrests of alien smugglers in US and Brazil",
+    "description": "Extensive coordination between the United States and Brazilian law enforcement led to the arrest of a previously convicted alien smuggler, Flavio Alexandre Alves, in Worcester, MA, and the execution of search warrants and arrests of alleged human smugglers in Brazil. Alves is charged with conspiracy to bring aliens to and transport aliens within the United States for financial gain.",
+    "location": "Worcester, MA",
+    "state": "MA",
+    "raidType": "Residential",
     "sourceType": "News",
-    "sourceUrl": "https://www.ice.gov/news/releases/father-son-arrested-fentanyl-trafficking-gun-sales-and-immigration-violations",
+    "sourceUrl": "https://www.ice.gov/news/releases/international-law-enforcement-cooperation-leads-takedown-and-immigration-arrests",
     "sourceName": "ICE News Releases",
     "raidDate": "2025-03-26T00:00:00.000Z",
-    "detaineeCount": 2
-  },
-  {
-    "title": "ICE arrests illegal Mexican national involved in 2014 vehicular homicide of 13-year-old girl",
-    "description": "ICE arrested Ramiro Guevara, a 46-year-old Mexican national, who was involved in a 2014 vehicle accident resulting in the death of a 13-year-old girl and had an outstanding deportation order.",
-    "location": "Dallas, TX",
-    "state": "TX",
-    "raidType": "Other",
-    "sourceType": "News",
-    "sourceUrl": "https://www.ice.gov/news/releases/ice-arrests-illegal-mexican-national-involved-2014-vehicular-homicide-13-year-old",
-    "sourceName": "ICE News Releases",
-    "raidDate": "2025-03-26T00:00:00.000Z",
-    "detaineeCount": 1
+    "detaineeCount": 4
   },
   {
     "title": "Florida sex offender sentenced to 15 years for distribution of child sexual abuse material",
-    "description": "A Florida man was sentenced to 15 years in federal prison for distributing child sexual abuse material on social media following a task force investigation that included U.S. Immigration and Customs Enforcement.",
+    "description": "A Florida man was sentenced to 15 years in federal prison for distributing imagery and video depicting child sexual abuse on a social media application.",
     "location": "Jacksonville, FL",
     "state": "FL",
     "raidType": "Other",
@@ -48,7 +60,7 @@
   },
   {
     "title": "Multiagency investigation results in Cartel Del Noreste leader sentencing for murder-for-hire, kidnapping conspiracies",
-    "description": "A Cartel Del Noreste leader was sentenced for his role in a murder-for-hire scheme involving bringing hitmen across the U.S. border into Laredo. The leader coordinated the kidnapping and murder of an individual the cartel believed had stolen from them.",
+    "description": "A Cartel Del Noreste leader was sentenced for his role in a murder-for-hire scheme that brought hitmen across the U.S. border into Laredo. He was found guilty of conspiracy to possess with intent to distribute cocaine, murder-for-hire conspiracy, murder for hire, conspiracy to kidnap, possession of firearms in furtherance of a drug trafficking-related crime and interstate travel in aid of racketeering.",
     "location": "Laredo, TX",
     "state": "TX",
     "raidType": "Other",
@@ -58,20 +70,8 @@
     "raidDate": "2025-03-28T00:00:00.000Z"
   },
   {
-    "title": "International law enforcement cooperation leads to takedown and immigration arrests of alien smugglers in US and Brazil",
-    "description": "A coordinated enforcement operation between U.S. and Brazilian law enforcement resulted in the arrest of an alien smuggler in Worcester, MA, and the execution of search warrants in Brazil. The operation targeted a transnational criminal organization allegedly responsible for smuggling individuals from Brazil to the United States.",
-    "location": "Worcester, MA",
-    "state": "MA",
-    "raidType": "Residential",
-    "sourceType": "News",
-    "sourceUrl": "https://www.ice.gov/news/releases/international-law-enforcement-cooperation-leads-takedown-and-immigration-arrests",
-    "sourceName": "ICE News Releases",
-    "raidDate": "2025-03-26T00:00:00.000Z",
-    "detaineeCount": 1
-  },
-  {
     "title": "ICE Arizona, multiagency case results in Nogales man sentenced to 10 years in prison for methamphetamine possession, intent to distribute",
-    "description": "A Nogales man was sentenced to 120 months in prison for possession with the intent to distribute methamphetamine. The case was investigated by multiple agencies, including ICE.",
+    "description": "A Nogales man was sentenced to 120 months in prison for possession with the intent to distribute methamphetamine, following an investigation by multiple agencies including ICE.",
     "location": "Tucson, AZ",
     "state": "AZ",
     "raidType": "Other",
@@ -83,8 +83,8 @@
   {
     "title": "ICE Salt Lake City removes foreign fugitive for sexual assault of minor",
     "description": "U.S. Immigration and Customs Enforcement removed Mexican citizen and foreign fugitive Jairo Ivan Paredes Cota, 43, to Mexico via ground transportation. Paredes is wanted in his home country for the sexual assault of a minor.",
-    "location": "Salt Lake City, UT",
-    "state": "UT",
+    "location": "Reno, Nevada",
+    "state": "NV",
     "raidType": "Other",
     "sourceType": "News",
     "sourceUrl": "https://www.ice.gov/news/releases/ice-salt-lake-city-removes-foreign-fugitive-sexual-assault-minor",
@@ -93,9 +93,127 @@
     "detaineeCount": 1
   },
   {
+    "title": "ICE Philadelphia removes illegal alien wanted for murder to Ecuador",
+    "description": "U.S. Immigration and Customs Enforcement removed Luis Gerardo Pelaez Llivichuzca, a citizen of Ecuador wanted for murder, to Ecuador.",
+    "location": "Philadelphia, PA",
+    "state": "PA",
+    "raidType": "Other",
+    "sourceType": "News",
+    "sourceUrl": "https://www.ice.gov/news/releases/ice-philadelphia-removes-illegal-alien-wanted-murder-ecuador",
+    "sourceName": "ICE News Releases",
+    "raidDate": "2025-03-27T00:00:00.000Z"
+  },
+  {
+    "title": "ICE arrests 72 criminal aliens during week-long multi-agency operation in the Rio Grande Valley",
+    "description": "ICE, with assistance from federal, state and local law enforcement partners, arrested 72 illegal aliens – including 61 criminal aliens and two documented gang members – during a targeted enforcement operation conducted from March 16 to 22 in the Rio Grande Valley area.",
+    "location": "Harlingen, TX",
+    "state": "TX",
+    "raidType": "Other",
+    "sourceType": "News",
+    "sourceUrl": "https://www.ice.gov/news/releases/ice-arrests-72-criminal-aliens-during-week-long-multi-agency-operation-rio-grande",
+    "sourceName": "ICE News Releases",
+    "raidDate": "2025-03-27T00:00:00.000Z",
+    "detaineeCount": 72
+  },
+  {
+    "title": "ICE, law enforcement partners arrest 13 illegal criminal alien offenders during Huntsville enforcement operation",
+    "description": "U.S. Immigration and Customs Enforcement along with law enforcement partners apprehended 13 illegal aliens in the Huntsville area during an enhanced, targeted enforcement operation focused on criminal illegal aliens. Eight of the offenders had been previously removed from the United States and have federal convictions for illegal reentry after removal.",
+    "location": "Huntsville, AL",
+    "state": "AL",
+    "raidType": "Other",
+    "sourceType": "News",
+    "sourceUrl": "https://www.ice.gov/news/releases/ice-law-enforcement-partners-arrest-13-illegal-criminal-alien-offenders-during",
+    "sourceName": "ICE News Releases",
+    "raidDate": "2025-03-25T00:00:00.000Z",
+    "detaineeCount": 13
+  },
+  {
+    "title": "ICE removes Mexican fugitive wanted for family violence",
+    "description": "U.S. Immigration and Customs Enforcement removed Juan Jasso-Botello, a 44-year-old Mexican fugitive wanted in Mexico for family violence.",
+    "location": "Nogales, AZ",
+    "state": "AZ",
+    "raidType": "Other",
+    "sourceType": "News",
+    "sourceUrl": "https://www.ice.gov/news/releases/ice-removes-mexican-fugitive-wanted-family-violence",
+    "sourceName": "ICE News Releases",
+    "raidDate": "2025-03-25T00:00:00.000Z",
+    "detaineeCount": 1
+  },
+  {
+    "title": "ICE Boston arrests Brazilian alien charged with assault, battery in Massachusetts",
+    "description": "U.S. Immigration and Customs Enforcement apprehended an illegally present Brazilian alien charged with assault and battery on a family member when officers arrested Weliton Pires-Dos Santos, 39, in Framingham.",
+    "location": "Framingham, MA",
+    "state": "MA",
+    "raidType": "Other",
+    "sourceType": "News",
+    "sourceUrl": "https://www.ice.gov/news/releases/ice-boston-arrests-brazilian-alien-charged-assault-battery-massachusetts",
+    "sourceName": "ICE News Releases",
+    "raidDate": "2025-01-26T00:00:00.000Z",
+    "detaineeCount": 1
+  },
+  {
+    "title": "ICE Houston removes Guatemalan fugitive wanted for criminal impersonation",
+    "description": "U.S. Immigration and Customs Enforcement removed Kevin Estuardo Escobar Chanas, a 27-year-old foreign fugitive wanted for criminal impersonation in Guatemala, from the United States.",
+    "location": "Houston, TX",
+    "state": "TX",
+    "raidType": "Other",
+    "sourceType": "News",
+    "sourceUrl": "https://www.ice.gov/news/releases/ice-houston-removes-guatemalan-fugitive-wanted-criminal-impersonation",
+    "sourceName": "ICE News Releases",
+    "raidDate": "2025-03-26T00:00:00.000Z",
+    "detaineeCount": 1
+  },
+  {
+    "title": "ICE arrests Chinese national convicted of illegally acting as agent of foreign government",
+    "description": "ICE apprehended Ming Xi Zhang, a Chinese national convicted of illegally acting as an agent of a foreign government, and detained him in Newark, New Jersey.",
+    "location": "Newark, NJ",
+    "state": "NJ",
+    "raidType": "Other",
+    "sourceType": "News",
+    "sourceUrl": "https://www.ice.gov/news/releases/ice-arrests-chinese-national-convicted-illegally-acting-agent-foreign-government",
+    "sourceName": "ICE News Releases",
+    "raidDate": "2025-03-24T00:00:00.000Z",
+    "detaineeCount": 1
+  },
+  {
+    "title": "ICE Boston arrests Lebanese alien charged with assault, battery, sex crime in Massachusetts",
+    "description": "U.S. Immigration and Customs Enforcement apprehended Pierre Maurice Al-Asmar, an illegally present Lebanese national charged with assault and battery and indecent assault and battery on person 14 or over.",
+    "location": "Lakeville, MA",
+    "state": "MA",
+    "raidType": "Other",
+    "sourceType": "News",
+    "sourceUrl": "https://www.ice.gov/news/releases/ice-boston-arrests-lebanese-alien-charged-assault-battery-sex-crime-massachusetts",
+    "sourceName": "ICE News Releases",
+    "raidDate": "2025-01-25T00:00:00.000Z",
+    "detaineeCount": 1
+  },
+  {
+    "title": "ICE, partners’ rapid response locate suspect at Newark airport attempting to flee the US",
+    "description": "ICE, assisted by partner law enforcement agencies, apprehended a Hungarian national at Newark Liberty International Airport who was wanted for allegedly raping a child. The suspect was attempting to flee the United States.",
+    "location": "Newark, NJ",
+    "state": "NJ",
+    "raidType": "Other",
+    "sourceType": "News",
+    "sourceUrl": "https://www.ice.gov/news/releases/ice-partners-rapid-response-locate-suspect-newark-airport-attempting-flee-us",
+    "sourceName": "ICE News Releases",
+    "raidDate": "2025-03-13T00:00:00.000Z",
+    "detaineeCount": 1
+  },
+  {
+    "title": "ICE Newark investigation leads to conviction of Pennsylvania man for conspiring to distribute cocaine",
+    "description": "A Pennsylvania man was found guilty of conspiring to distribute cocaine following an U.S. Immigration and Customs Enforcement investigation.",
+    "location": "Camden, NJ",
+    "state": "NJ",
+    "raidType": "Other",
+    "sourceType": "News",
+    "sourceUrl": "https://www.ice.gov/news/releases/ice-newark-investigation-leads-conviction-pennsylvania-man-conspiring-distribute",
+    "sourceName": "ICE News Releases",
+    "raidDate": "2021-07-13T00:00:00.000Z"
+  },
+  {
     "title": "ICE arrests Brazilian national convicted of drug trafficking in home country",
-    "description": "ICE arrested a Brazilian national wanted for drug trafficking in his home country.",
-    "location": "Long Branch, NJ",
+    "description": "U.S. Immigration and Customs Enforcement arrested Dirlei Da Luz Da Silva, 35, a citizen of Brazil wanted by Brazilian authorities for failing to appear and serve his sentence for drug trafficking related crimes.",
+    "location": "Long Branch, New Jersey",
     "state": "NJ",
     "raidType": "Other",
     "sourceType": "News",
@@ -105,26 +223,15 @@
     "detaineeCount": 1
   },
   {
-    "title": "ICE Newark investigation leads to conviction of Pennsylvania man for conspiring to distribute cocaine",
-    "description": "A Pennsylvania man was found guilty of conspiring to distribute cocaine following an U.S. Immigration and Customs Enforcement investigation. Marvin Murphy, 48, of Philadelphia, was convicted on March 18 after a two-day bench trial at the U.S. District Court for the District of New Jersey in Camden. Murphy was remanded into custody after the verdict.",
-    "location": "Camden, NJ",
-    "state": "NJ",
+    "title": "ICE San Franciso and partners take transnational criminal off the streets in California",
+    "description": "ICE arrested Gurdev Singh, an Indian national and criminal alien, as part of a targeted criminal enforcement action.",
+    "location": "French Camp, CA",
+    "state": "CA",
     "raidType": "Other",
     "sourceType": "News",
-    "sourceUrl": "https://www.ice.gov/news/releases/ice-newark-investigation-leads-conviction-pennsylvania-man-conspiring-distribute",
+    "sourceUrl": "https://www.ice.gov/news/releases/ice-san-franciso-and-partners-take-transnational-criminal-streets-california",
     "sourceName": "ICE News Releases",
-    "raidDate": "2025-03-25T00:00:00.000Z"
-  },
-  {
-    "title": "Child Exploitation ICE, partners’ rapid response locate suspect at Newark airport attempting to flee the US",
-    "description": "ICE, assisted by other law enforcement agencies, located and apprehended a Hungarian national at Newark Liberty International Airport who was wanted for allegedly raping a child.",
-    "location": "Newark, NJ",
-    "state": "NJ",
-    "raidType": "Other",
-    "sourceType": "News",
-    "sourceUrl": "https://www.ice.gov/news/releases/ice-partners-rapid-response-locate-suspect-newark-airport-attempting-flee-us",
-    "sourceName": "ICE News Releases",
-    "raidDate": "2025-03-13T00:00:00.000Z",
+    "raidDate": "2025-03-12T00:00:00.000Z",
     "detaineeCount": 1
   },
   {
@@ -141,7 +248,7 @@
   },
   {
     "title": "Driver of second human smuggling vehicle involved in 2021 Southwest Texas incident sentenced to 10 years in federal prison following ICE Del Rio and federal partner investigation",
-    "description": "A Salvadoran man was sentenced to 10 years in prison for his role in a 2021 human smuggling operation that resulted in the death of eight people. The investigation was conducted by ICE with assistance from U.S. Border Patrol and the Texas Department of Public Safety.",
+    "description": "A Salvadoran man was sentenced to 10 years in prison for his role in a deadly 2021 human smuggling operation. He was the driver of the second vehicle involved in the incident where one vehicle crashed, killing eight illegal alien passengers, and the other driver, Barrientos-Quintanilla, was apprehended after a traffic stop and subsequent foot chase.",
     "location": "Del Rio, TX",
     "state": "TX",
     "raidType": "Other",
@@ -152,30 +259,6 @@
     "detaineeCount": 12
   },
   {
-    "title": "ICE San Franciso and partners take transnational criminal off the streets in California",
-    "description": "U.S. Immigration and Customs Enforcement arrested Gurdev Singh, an Indian national, as part of a targeted criminal enforcement action after he was found to be associated with transnational criminal organizations and illegally carrying firearms.",
-    "location": "French Camp, California",
-    "state": "CA",
-    "raidType": "Other",
-    "sourceType": "News",
-    "sourceUrl": "https://www.ice.gov/news/releases/ice-san-franciso-and-partners-take-transnational-criminal-streets-california",
-    "sourceName": "ICE News Releases",
-    "raidDate": "2025-03-12T00:00:00.000Z",
-    "detaineeCount": 1
-  },
-  {
-    "title": "DHS, ICE, and interagency enforcement arrest and extradite Honduran criminal alien",
-    "description": "Arrest and extradition of Eswin Mejia, a Honduran criminal alien wanted in connection with a 2016 motor vehicle homicide in Douglas County, Nebraska.",
-    "location": "Washington, DC",
-    "state": "DC",
-    "raidType": "Other",
-    "sourceType": "News",
-    "sourceUrl": "https://www.ice.gov/news/releases/dhs-ice-and-interagency-enforcement-arrest-and-extradite-honduran-criminal-alien",
-    "sourceName": "ICE News Releases",
-    "raidDate": "2025-03-21T00:00:00.000Z",
-    "detaineeCount": 1
-  },
-  {
     "title": "ICE, law enforcement partners arrest 370 alien offenders during enhanced operation in Massachusetts",
     "description": "U.S. Immigration and Customs Enforcement and federal law enforcement partners apprehended 370 illegal aliens in Massachusetts during an enhanced targeted enforcement operation focusing on transnational organized crime, gangs, and egregious illegal alien offenders.",
     "location": "Boston, MA",
@@ -184,18 +267,7 @@
     "sourceType": "News",
     "sourceUrl": "https://www.ice.gov/news/releases/ice-law-enforcement-partners-arrest-370-alien-offenders-during-enhanced-operation",
     "sourceName": "ICE News Releases",
-    "raidDate": "2025-03-24T00:00:00.000Z",
+    "raidDate": "2025-03-18T00:00:00.000Z",
     "detaineeCount": 370
-  },
-  {
-    "title": "ICE, federal partner investigation results in 2 men convicted, 1 extradited from Guatemala for role in 2022 San Antonio alien smuggling mass casualty incident",
-    "description": "Two men were convicted for their roles in a 2022 mass casualty alien smuggling event in San Antonio, Texas that resulted in 53 deaths. A third man was extradited from Guatemala to face justice in the case.",
-    "location": "San Antonio, TX",
-    "state": "TX",
-    "raidType": "Other",
-    "sourceType": "News",
-    "sourceUrl": "https://www.ice.gov/news/releases/ice-federal-partner-investigation-results-2-men-convicted-1-extradited-guatemala-role",
-    "sourceName": "ICE News Releases",
-    "raidDate": "2022-06-27T00:00:00.000Z"
   }
 ]

@@ -5,7 +5,7 @@ interface HeaderProps {
   onInfoClick: () => void;
   onSettingsClick: () => void;
 }
-
+ 
 export default function Header({ onInfoClick, onSettingsClick }: HeaderProps) {
   return (
     <header className="bg-primary text-white shadow-md">

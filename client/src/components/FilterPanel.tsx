@@ -13,7 +13,7 @@ import { Label } from "@/components/ui/label";
 import { RaidFilters, RaidData, US_STATES, RaidType } from "@/types";
 import { getDateDaysAgo, dateRangeOptions } from "@/lib/dateUtils";
 import RecentActivityList from "./RecentActivityList";
-
+   
 interface FilterPanelProps {
   filters: RaidFilters;
   onFilterChange: (filters: RaidFilters) => void;
