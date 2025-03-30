@@ -1,4 +1,7 @@
-import { initScraperURL } from "./urlScraper";
+
+
+import { scrapeNewsRaids } from "./newsScrapers";
+import { scrapeSocialMediaRaids } from "./socialMediaScrapers";
 import { storage } from "../storage";
 import { geocodeLocation } from "../services/geocoder";
 import { InsertIceRaid } from "@shared/schema";
@@ -20,16 +23,12 @@ export async function initScrapers() {
   console.log("Starting scraping process");
   
   try {
-    // Scrape url for ICE raids
-    const allScrapedRaids: ScrapedRaid[] = [];
-    const urlIn = 'https://www.ice.gov/newsroom'; // Replace with actual URL
-    const scrapedRaids = await initScraperURL(urlIn);
+    // Collect scraped data from different sources
+    const newsRaids = await scrapeNewsRaids();
+    const socialMediaRaids = await scrapeSocialMediaRaids();
 
     // Combine all scraped data
-    
-    if (scrapedRaids) {
-      allScrapedRaids.push(...scrapedRaids); // Use spread operator to add multiple raids if scrapedRaids is an array
-    }
+    const allScrapedRaids = [...newsRaids, ...socialMediaRaids];
     
     // Process and store each raid
     for (const raid of allScrapedRaids) {
