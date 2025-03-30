@@ -26,7 +26,7 @@ export const users = pgTable("users", {
   password: text("password").notNull(),
 });
 
-// ICE Raids table
+// ICE Raids table--
 export const iceRaids = pgTable("ice_raids", {
   id: serial("id").primaryKey(),
   title: text("title").notNull(),
