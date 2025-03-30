@@ -14,7 +14,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   const httpServer = createServer(app);
   
   // Initialize scrapers and schedule them to run
-  await initScrapers();
+  //await initScrapers();
   setupScheduler();
 
   // API Routes
