@@ -1,9 +1,16 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 import { GoogleGenAI } from '@google/genai';
+import dotenv from 'dotenv';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+
+
+// Load .env file from the server root
+const __filename1 = fileURLToPath(import.meta.url);
+const __dirname1 = path.dirname(__filename1);
+dotenv.config({ path: path.resolve(__dirname1, "../.env") }); // Adjust path as needed
 
 // Define ScrapedRaid interface here for clarity
 interface ScrapedRaid {
@@ -20,8 +27,11 @@ interface ScrapedRaid {
 }
 
 // Configuration for Gemini API
-const GEMINI_API_KEY = 'AIzaSyBD4m4cJbEkOb_yyaI6XVfBz3v_ytGckEs'; // Replace with your actual API key
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
+if (!GEMINI_API_KEY) {
+  throw new Error("Missing GEMINI_API_KEY in environment variables.");
+}
 // File path setup
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
